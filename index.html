@@ -267,6 +267,81 @@
     ::-webkit-scrollbar-thumb:hover {
       background: #9a9a95;
     }
+    /* About & CV Grid Layout Styles */
+.cv-container {
+  display: flex;
+  gap: 50px;
+  height: 80%;
+  margin: auto 0;
+  overflow-y: auto; /* Fallback vertical scroll if text is long on small screens */
+  padding-right: 10px;
+}
+
+.profile-column {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.profile-img-placeholder {
+  width: 100%;
+  height: 240px;
+  background-color: #e4e4e0;
+  border: 1px solid #dcdcd8;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.profile-img-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-column p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4a4a46;
+}
+
+.cv-column {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cv-section-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #767672;
+  border-bottom: 1px solid #e4e4e0;
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+  letter-spacing: 0.05em;
+}
+
+.cv-item {
+  margin-bottom: 14px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.cv-item-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.cv-item-sub {
+  color: #767672;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+}
+
   </style>
 </head>
 <body>
@@ -376,6 +451,75 @@
   </section>
   <!-- ==================== PROJECT 02 END ==================== -->
 
+   
+  <!-- ==================== ABOUT & CV START ==================== -->
+  <section class="board" id="about-cv" style="border-left: 4px solid #1a1a1a;">
+    <div class="board-content">
+      <div class="board-header">
+        <h2>About & Professional CV</h2>
+        <span class="board-number">00 // PROFILE</span>
+      </div>
+      
+      <div class="cv-container">
+        
+        <!-- Left Side: Profile Bio & Photo -->
+        <div class="profile-column">
+          <div class="profile-img-placeholder">
+            <!-- Replace with your actual portrait photo name later -->
+            <img src="profile.jpg" alt="Alex Mercer Portrait">
+          </div>
+          <p>I am an architectural designer focused on digital fabrication systems, modular design frameworks, and material lifecycle optimizations. My work bridges strict technical calculation with fluid, contextual geometries to deliver sustainable community environments.</p>
+        </div>
+        
+        <!-- Right Side: Resumé Details -->
+        <div class="cv-column">
+          
+          <!-- Experience Segment -->
+          <div>
+            <div class="cv-section-title">Professional Experience</div>
+            
+            <div class="cv-item">
+              <div class="cv-item-header">Junior Architectural Designer</div>
+              <div class="cv-item-sub">Studio Bauhaus / Berlin, DE // 2025 – Present</div>
+            </div>
+            
+            <div class="cv-item">
+              <div class="cv-item-header">Architectural Intern</div>
+              <div class="cv-item-sub">Matrix Works / London, UK // 2024</div>
+            </div>
+          </div>
+          
+          <!-- Education Segment -->
+          <div>
+            <div class="cv-section-title">Education</div>
+            
+            <div class="cv-item">
+              <div class="cv-item-header">Master of Architecture (M.Arch)</div>
+              <div class="cv-item-sub">Technical University of Berlin // Graduate 2025</div>
+            </div>
+            
+            <div class="cv-item">
+              <div class="cv-item-header">B.Sc. in Architectural Studies</div>
+              <div class="cv-item-sub">UCL The Bartlett School // Graduate 2023</div>
+            </div>
+          </div>
+
+          <!-- Software Proficiency Segment -->
+          <div>
+            <div class="cv-section-title">Technical Expertise</div>
+            <div class="cv-item" style="font-family: 'Space Mono', monospace; font-size: 0.8rem; color: #4a4a46;">
+              Rhinoceros 3D / Grasshopper / Revit / AutoCAD / V-Ray / Adobe Creative Suite / Figma / HTML5 / CSS3
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  <!-- ==================== ABOUT & CV END ==================== -->
+
+   
 </main>
 
 
