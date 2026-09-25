@@ -31,6 +31,7 @@
 
     }
 
+
     /* Fixed Sidebar Navigation */
     nav {
       position: fixed;
@@ -342,6 +343,81 @@
   font-size: 0.75rem;
 }
 
+/* Table of Contents Landing Page Grid Layout Styles */
+.toc-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80%;
+  margin: auto 0;
+  width: 100%;
+}
+
+.toc-title {
+  font-size: 2.2rem;
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  color: #1a1a1a;
+  margin-bottom: 50px;
+}
+
+.toc-grid {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.toc-item {
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.toc-item:hover {
+  transform: translateY(-4px);
+}
+
+.toc-img-box {
+  width: 100%;
+  aspect-ratio: 16/10;
+  background-color: #e4e4e0;
+  border: 1px solid #dcdcd8;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.toc-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.toc-item:hover .toc-img-box img {
+  filter: grayscale(0%);
+}
+
+.toc-number {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1;
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+}
+
+.toc-project-name {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: #767672;
+  margin-top: 4px;
+}
+
+    
   </style>
 </head>
 <body>
@@ -349,6 +425,8 @@
   <!-- FIXED SIDEBAR -->
   <nav>
     <div class="logo-area">
+   <!-- Clicking your name now redirects back to the main landing page -->
+    <a href="#home" style="text-decoration: none; color: inherit; display: block;">
       <h1>Luam Abraha</h1>
       <span>Architectural Portfolio</span>
       
@@ -365,8 +443,64 @@
     </div>
   </nav>
 
-  <!-- HORIZONTAL PORTFOLIO CANVAS -->
- <main>
+    <!-- HORIZONTAL PORTFOLIO CANVAS -->
+  <main>
+
+    <!-- ==================== LANDING PAGE / TABLE OF CONTENTS ==================== -->
+    <section class="board" id="home">
+      <div class="board-content">
+        <div class="board-header">
+          <h2>Index</h2>
+          <span class="board-number">00 // MAIN</span>
+        </div>
+        
+        <div class="toc-container">
+          <h3 class="toc-title">Table of Contents</h3>
+          
+          <div class="toc-grid">
+            
+            <!-- Index Item 01 -->
+            <a href="#project-01" class="toc-item">
+              <div class="toc-img-box">
+                <img src="pavilion-cover.jpg" alt="Project 01 Preview">
+              </div>
+              <div class="toc-number">01</div>
+              <div class="toc-project-name">The Pavilion</div>
+            </a>
+            
+            <!-- Index Item 02 -->
+            <a href="#project-02" class="toc-item">
+              <div class="toc-img-box">
+                <img src="library-hero.jpg" alt="Project 02 Preview">
+              </div>
+              <div class="toc-number">02</div>
+              <div class="toc-project-name">Urban Library</div>
+            </a>
+            
+            <!-- Index Item 03 -->
+            <a href="#about-cv" class="toc-item">
+              <div class="toc-img-box">
+                <img src="profile.jpg" alt="Profile Preview">
+              </div>
+              <div class="toc-number">03</div>
+              <div class="toc-project-name">About & CV</div>
+            </a>
+            
+            <!-- Index Item 04 (Placeholder/Future Project) -->
+            <div class="toc-item" style="opacity: 0.4; cursor: default;">
+              <div class="toc-img-box">
+                <!-- Empty grey block placeholder -->
+              </div>
+              <div class="toc-number">04</div>
+              <div class="toc-project-name">Upcoming Work</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==================== END LANDING PAGE ==================== -->
+
 
   <!-- ==================== PROJECT 01 START ==================== -->
   <!-- We add id="project-01" to the very first board of this project -->
