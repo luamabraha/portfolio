@@ -290,81 +290,88 @@
   </nav>
 
   <!-- HORIZONTAL PORTFOLIO CANVAS -->
-  <main>
+ <main>
 
-    <!-- BOARD 1: HERO / COVER -->
-    <section class="board">
-      <div class="board-content">
-        <div class="board-header">
-          <h2>Project 01: School of Architectural Technology</h2>
-          <span class="board-number">01 // COVER</span>
+  <!-- ==================== PROJECT 01 START ==================== -->
+  <!-- We add id="project-01" to the very first board of this project -->
+  <section class="board" id="project-01">
+    <div class="board-content">
+      <div class="board-header">
+        <h2>Project 01: The Pavilion</h2>
+        <span class="board-number">01 // COVER</span>
+      </div>
+      <div class="grid-container">
+        <div class="col-text"><p>Pavilion project summary text here...</p></div>
+        <div class="col-image"><img src="pavilion-cover.jpg" alt="Pavilion"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project 01: Board 2 (Technical) -->
+  <section class="board">
+    <div class="board-content">
+      <div class="board-header">
+        <h2>Pavilion Drawings</h2>
+        <span class="board-number">01 // METRIC</span>
+      </div>
+      <div class="grid-container">
+        <div class="col-text"><p>Technical breakdown text here...</p></div>
+        <div class="col-image"><img src="pavilion-plan.svg" alt="Pavilion Plan"></div>
+      </div>
+    </div>
+  </section>
+  <!-- ==================== PROJECT 01 END ==================== -->
+
+
+  <!-- ==================== PROJECT 02 START ==================== -->
+  <!-- We add id="project-02" to the first board of your next project -->
+  <section class="board" id="project-02" style="border-left: 4px solid #1a1a1a;">
+    <div class="board-content">
+      <div class="board-header">
+        <h2>Project 02: Urban Library</h2>
+        <span class="board-number">02 // COVER</span>
+      </div>
+      
+      <div class="grid-container">
+        <div class="col-text">
+          <p>A multi-tiered municipal public space utilizing heavy timber masses paired with integrated urban green zones.</p>
+          <ul class="metadata">
+            <li><strong>Typology:</strong> Public Educational</li>
+            <li><strong>Location:</strong> Berlin, DE</li>
+            <li><strong>Year:</strong> 2026</li>
+          </ul>
         </div>
-        
-        <div class="grid-container">
-          <div class="col-text">
-            <p>An exploration into low-impact community structures blending lightweight timber frame components with modular brutalist masonry geometries.</p>
-            <ul class="metadata">
-              <li><strong>Typology:</strong> Cultural Pavilion</li>
-              <li><strong>Location:</strong> Berlin, DE</li>
-              <li><strong>Year:</strong> 2026</li>
-            </ul>
-          </div>
-          <div class="col-image">
-            <!-- Replace src with your image path later -->
-            <img src="Final board.jpg" alt="Hero Render">
-            <div class="drawing-label">Fig 1.0 — Context Render</div>
-          </div>
+        <div class="col-image">
+          <img src="library-hero.jpg" alt="Library Main Render">
+          <div class="drawing-label">Fig 1.0 — Atrium Visualization</div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- BOARD 2: CONCEPT / SITE ANALYSIS -->
-    <section class="board">
-      <div class="board-content">
-        <div class="board-header">
-          <h2>Concept & Diagramming</h2>
-          <span class="board-number">01 // MATRIX</span>
+  <!-- Project 02: Board 2 (Technical) -->
+  <section class="board">
+    <div class="board-content">
+      <div class="board-header">
+        <h2>Library Sections & Details</h2>
+        <span class="board-number">02 // DETAIL</span>
+      </div>
+      
+      <div class="grid-container">
+        <div class="col-text">
+          <p>Detailed construction assembly showing the custom curtain wall interaction with glue-laminated structural beams.</p>
         </div>
-        
-        <div class="grid-container">
-          <div class="col-text">
-            <p>Massing iterations responded directly to solar path analysis and existing root boundaries of centuries-old oak structures occupying the plot center.</p>
-          </div>
-          <div class="col-image-split">
-            <div class="split-box" style="position: relative;">
-              <img src="Final board2.jpg" alt="Diagram 1">
-              <div class="drawing-label">Fig 2.1 — Axonometric Volumetric Study</div>
-            </div>
-            <div class="split-box" style="position: relative;">
-              <img src="Final board3.jpg" alt="Diagram 2">
-              <div class="drawing-label">Fig 2.2 — Structural Joint Detail Mockup</div>
-            </div>
-          </div>
+        <div class="col-image">
+          <img src="library-section.png" alt="Library Section Detail">
+          <div class="drawing-label">Fig 2.0 — Curtain Wall Section 1:20</div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+  <!-- ==================== PROJECT 02 END ==================== -->
 
-    <!-- BOARD 3: TECHNICAL EXECUTION / FLOOR PLANS -->
-    <section class="board">
-      <div class="board-content">
-        <div class="board-header">
-          <h2>Execution & Floor Plans</h2>
-          <span class="board-number">01 // METRIC</span>
-        </div>
-        
-        <div class="grid-container">
-          <div class="col-text">
-            <p>Primary pathways loop symmetrically through a sequence of internal pockets, guiding visitors seamlessly down to the lower water-retaining cistern terraces.</p>
-          </div>
-          <div class="col-image">
-            <img src="Final board4.jpg" alt="Floor Plan Draft">
-            <div class="drawing-label">Fig 3.0 — Level 01 Ground Layout Floorplan</div>
-          </div>
-        </div>
-      </div>
-    </section>
+</main>
 
-  </main>
 
 </body>
 </html>
