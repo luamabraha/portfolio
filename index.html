@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Architecture Portfolio</title>
-  <!-- Clean Monospace and Sans-Serif Fonts -->
-  <link rel="preconnect" href="https://googleapis.com">
-  <link rel="preconnect" href="https://gstatic.com" crossorigin>
-  <link href="https://googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&family=Space+Mono&display=swap" rel="stylesheet">
+
+  <!-- Clean Monospace, Montserrat, and Sans-Serif Fonts -->
+<link rel="preconnect" href="https://googleapis.com">
+<link rel="preconnect" href="https://gstatic.com" crossorigin>
+<link href="https://googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Space+Grotesk:wght@300;400;500&family=Space+Mono&display=swap" rel="stylesheet">
   
   <style>
     /* Reset & Core Aesthetics */
@@ -164,18 +165,21 @@
     }
 
     .col-text {
-      font-family: 'Montserrat', sans-serif;
       flex: 1;
       max-width: 320px;
     }
 
     .col-text p {
-      font-size: 0.9rem;
-      line-height: 1.6;
-      color: #4a4a46;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 400;
+      line-height: 1.65; /* Slight increase to make Montserrat highly readable */
+      letter-spacing: -0.01em; /* Tightens text tracking for a more structured look */
+      color: #3a3a36;
       margin-bottom: 20px;
     }
 
+    
     .metadata {
       font-family: 'Space Mono', monospace;
       font-size: 0.75rem;
@@ -269,160 +273,163 @@
     ::-webkit-scrollbar-thumb:hover {
       background: #9a9a95;
     }
-    /* About & CV Grid Layout Styles */
-.cv-container {
-  display: flex;
-  gap: 50px;
-  height: 80%;
-  margin: auto 0;
-  overflow-y: auto; /* Fallback vertical scroll if text is long on small screens */
-  padding-right: 10px;
-}
-
-.profile-column {
-  flex: 1.2;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.profile-img-placeholder {
-  width: 100%;
-  height: 240px;
-  background-color: #e4e4e0;
-  border: 1px solid #dcdcd8;
-  margin-bottom: 24px;
-  overflow: hidden;
-}
-
-.profile-img-placeholder img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.profile-column p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #4a4a46;
-}
-
-.cv-column {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.cv-section-title {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  color: #767672;
-  border-bottom: 1px solid #e4e4e0;
-  padding-bottom: 4px;
-  margin-bottom: 12px;
-  letter-spacing: 0.05em;
-}
-
-.cv-item {
-  margin-bottom: 14px;
-  font-size: 0.85rem;
-  line-height: 1.5;
-}
-
-.cv-item-header {
-  display: flex;
-  justify-content: space-between;
-  font-weight: 500;
-  color: #1a1a1a;
-}
-
-.cv-item-sub {
-  color: #767672;
-  font-family: 'Space Mono', monospace;
-  font-size: 0.75rem;
-}
-
-/* Table of Contents Landing Page Grid Layout Styles */
-.toc-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 80%;
-  margin: auto 0;
-  width: 100%;
-}
-
-.toc-title {
-  font-size: 2.2rem;
-  font-weight: 300;
-  letter-spacing: -0.03em;
-  color: #1a1a1a;
-  margin-bottom: 50px;
-}
-
-.toc-grid {
-  display: flex;
-  gap: 20px;
-  width: 100%;
-}
-
-.toc-item {
-  flex: 1;
-  text-decoration: none;
-  color: inherit;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s ease;
-}
-
-.toc-item:hover {
-  transform: translateY(-4px);
-}
-
-.toc-img-box {
-  width: 100%;
-  aspect-ratio: 16/10;
-  background-color: #e4e4e0;
-  border: 1px solid #dcdcd8;
-  overflow: hidden;
-  margin-bottom: 15px;
-}
-
-.toc-img-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: grayscale(100%);
-  transition: filter 0.3s ease;
-}
-
-.toc-item:hover .toc-img-box img {
-  filter: grayscale(0%);
-}
-
-.toc-number {
-  font-size: 2.5rem;
-  font-weight: 500;
-  line-height: 1;
-  color: #1a1a1a;
-  letter-spacing: -0.02em;
-}
-
-.toc-project-name {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  color: #767672;
-  margin-top: 4px;
-}
-
-  </style>
-</head>
-<body>
-
-
+    
+        /* About & CV Grid Layout Styles */
+    .cv-container {
+      display: flex;
+      gap: 50px;
+      height: 80%;
+      margin: auto 0;
+      overflow-y: auto; /* Fallback vertical scroll if text is long on small screens */
+      padding-right: 10px;
+    }
+    
+    .profile-column {
+      flex: 1.2;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    
+    .profile-img-placeholder {
+      width: 100%;
+      height: 240px;
+      background-color: #e4e4e0;
+      border: 1px solid #dcdcd8;
+      margin-bottom: 24px;
+      overflow: hidden;
+    }
+    
+    .profile-img-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .profile-column p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 400;
+      line-height: 1.65;
+      color: #3a3a36;
+    }
+    
+    .cv-column {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    
+    .cv-section-title {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: #767672;
+      border-bottom: 1px solid #e4e4e0;
+      padding-bottom: 4px;
+      margin-bottom: 12px;
+      letter-spacing: 0.05em;
+    }
+    
+    .cv-item {
+      margin-bottom: 14px;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+    
+    .cv-item-header {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 500;
+      color: #1a1a1a;
+    }
+    
+    .cv-item-sub {
+      color: #767672;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.75rem;
+    }
+    
+    /* Table of Contents Landing Page Grid Layout Styles */
+    .toc-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 80%;
+      margin: auto 0;
+      width: 100%;
+    }
+    
+    .toc-title {
+      font-size: 2.2rem;
+      font-weight: 300;
+      letter-spacing: -0.03em;
+      color: #1a1a1a;
+      margin-bottom: 50px;
+    }
+    
+    .toc-grid {
+      display: flex;
+      gap: 20px;
+      width: 100%;
+    }
+    
+    .toc-item {
+      flex: 1;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease;
+    }
+    
+    .toc-item:hover {
+      transform: translateY(-4px);
+    }
+    
+    .toc-img-box {
+      width: 100%;
+      aspect-ratio: 16/10;
+      background-color: #e4e4e0;
+      border: 1px solid #dcdcd8;
+      overflow: hidden;
+      margin-bottom: 15px;
+    }
+    
+    .toc-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+    }
+    
+    .toc-item:hover .toc-img-box img {
+      filter: grayscale(0%);
+    }
+    
+    .toc-number {
+      font-size: 2.5rem;
+      font-weight: 500;
+      line-height: 1;
+      color: #1a1a1a;
+      letter-spacing: -0.02em;
+    }
+    
+    .toc-project-name {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      color: #767672;
+      margin-top: 4px;
+    }
+    
+      </style>
+    </head>
+    <body>
+    
+    
 
 
 
