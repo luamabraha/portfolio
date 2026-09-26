@@ -77,11 +77,18 @@
       text-decoration: none;
       color: #767672;
       font-size: 0.9rem;
-      transition: color 0.2s ease;
+      transition: color 0.3s ease; /* Smooth transition matching the TOC hover */
     }
 
-    .nav-links a:hover, .nav-links a.active {
-      color: #1a1a1a;
+    /* Change navigation text to wine red on hover */
+    .nav-links a:hover {
+      color: #722F37; /* Wine Red */
+    }
+    
+    /* Style for the link of the page you are currently viewing */
+    .nav-links a.active {
+      color: #722F37; /* Wine Red */
+      font-weight: 500;
     }
 
     .nav-footer {
@@ -387,6 +394,17 @@
     .toc-item:hover {
       transform: translateY(-4px);
     }
+
+    /* Change TOC numbers to a deep wine red when hovering over the card */
+    .toc-item:hover .toc-number {
+      color: #722F37; /* Architectural wine red / burgundy */
+      transition: color 0.3s ease;
+    }
+
+    .toc-item:hover .toc-project-name {
+      color: #722F37;
+      transition: color 0.3s ease;
+    }
     
     .toc-img-box {
       width: 100%;
@@ -410,11 +428,13 @@
     }
     
     .toc-number {
-      font-size: 2.5rem;
-      font-weight: 500;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.8rem; /* Slightly increased scale to emphasize the Montserrat numerals */
+      font-weight: 300;
       line-height: 1;
       color: #1a1a1a;
       letter-spacing: -0.02em;
+      margin-top: 8px;
     }
     
     .toc-project-name {
@@ -696,6 +716,20 @@
    
 </main>
 
+      
+<script>
+  // Highlights the correct navigation link when clicked
+  const navLinks = document.querySelectorAll('.nav-links a');
+  
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.forEach(item => item.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+</script>
 
+
+      
 </body>
 </html>
