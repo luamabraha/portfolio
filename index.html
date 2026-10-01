@@ -730,6 +730,27 @@
 
       
 <script>
+  // Map vertical mouse-wheel movement to the horizontal portfolio canvas.
+  document.addEventListener('wheel', event => {
+    if (event.ctrlKey || event.defaultPrevented ||
+        Math.abs(event.deltaX) >= Math.abs(event.deltaY)) return;
+
+    // Let overflowing CV content scroll vertically while it has room.
+    const cv = event.target instanceof Element
+      ? event.target.closest('.cv-container') : null;
+    if (cv && ((event.deltaY > 0 && cv.scrollTop + cv.clientHeight < cv.scrollHeight - 1) ||
+               (event.deltaY < 0 && cv.scrollTop > 0))) return;
+
+    const canvas = document.scrollingElement;
+    if (!canvas || canvas.scrollWidth <= canvas.clientWidth) return;
+
+    // Wheel deltas can be measured in pixels, lines, or pages.
+    const unit = event.deltaMode === 1 ? 16 :
+                 event.deltaMode === 2 ? canvas.clientWidth : 1;
+    event.preventDefault();
+    canvas.scrollBy({ left: event.deltaY * unit, behavior: 'instant' });
+  }, { passive: false });
+
   // Highlights the correct navigation link when clicked
   const navLinks = document.querySelectorAll('.nav-links a');
   
